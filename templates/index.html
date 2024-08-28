@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Welcome to the Flask Login App</h1>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="text-center">
+        <h1 class="display-4">Welcome, My Dear VarshaArun!</h1>
+        <p class="lead">We’re thrilled to have you here. Exciting features are on the way. Stay tuned!</p>
+        <div class="mt-4">
+            <a href="/login" class="btn btn-primary btn-lg mr-2">Login</a>
+            <a href="/register" class="btn btn-success btn-lg mr-2">Register</a>
+            <a href="/logout" class="btn btn-danger btn-lg">Logout</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

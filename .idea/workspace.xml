@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd9ba625-cfae-4c0e-81db-56c1120c06e4" name="Default Changelist" comment="" />
+    <list default="true" id="bd9ba625-cfae-4c0e-81db-56c1120c06e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,7 +46,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration name="mongo_client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="arun-app" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -51,7 +59,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mongo_client.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -62,7 +70,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mongo_client" />
+        <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
   </component>
@@ -80,6 +88,8 @@
       <workItem from="1724817609880" duration="2623000" />
       <workItem from="1724825787110" duration="1763000" />
       <workItem from="1724839566334" duration="2008000" />
+      <workItem from="1724844876090" duration="2214000" />
+      <workItem from="1724847927794" duration="2164000" />
     </task>
     <servers />
   </component>
@@ -87,33 +97,53 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="450" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1724818954007">
+    <state x="450" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1724848054106">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
-    <state x="450" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.34.1848.1046@72.34.1848.1046" timestamp="1724818954007" />
-    <state x="726" y="258" width="530" height="605" key="FileChooserDialogImpl" timestamp="1724818761954">
+    <state x="450" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.34.1848.1046@72.34.1848.1046" timestamp="1724848054106" />
+    <state x="656" y="341" width="670" height="438" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1724846057977">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
-    <state x="726" y="258" width="530" height="605" key="FileChooserDialogImpl/72.34.1848.1046@72.34.1848.1046" timestamp="1724818761954" />
-    <state width="1792" height="259" key="GridCell.Tab.0.bottom" timestamp="1724828819479">
+    <state x="656" y="341" width="670" height="438" key="#com.intellij.fileTypes.FileTypeChooser/72.34.1848.1046@72.34.1848.1046" timestamp="1724846057977" />
+    <state x="726" y="258" width="530" height="605" key="FileChooserDialogImpl" timestamp="1724848053558">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
-    <state width="1792" height="259" key="GridCell.Tab.0.bottom/72.34.1848.1046@72.34.1848.1046" timestamp="1724828819479" />
-    <state width="1792" height="259" key="GridCell.Tab.0.center" timestamp="1724828819478">
+    <state x="726" y="258" width="530" height="605" key="FileChooserDialogImpl/72.34.1848.1046@72.34.1848.1046" timestamp="1724848053558" />
+    <state width="1792" height="321" key="GridCell.Tab.0.bottom" timestamp="1724849996824">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
-    <state width="1792" height="259" key="GridCell.Tab.0.center/72.34.1848.1046@72.34.1848.1046" timestamp="1724828819478" />
-    <state width="1792" height="259" key="GridCell.Tab.0.left" timestamp="1724828819478">
+    <state width="1792" height="321" key="GridCell.Tab.0.bottom/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996824" />
+    <state width="1792" height="321" key="GridCell.Tab.0.center" timestamp="1724849996824">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
-    <state width="1792" height="259" key="GridCell.Tab.0.left/72.34.1848.1046@72.34.1848.1046" timestamp="1724828819478" />
-    <state width="1792" height="259" key="GridCell.Tab.0.right" timestamp="1724828819479">
+    <state width="1792" height="321" key="GridCell.Tab.0.center/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996824" />
+    <state width="1792" height="321" key="GridCell.Tab.0.left" timestamp="1724849996823">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
-    <state width="1792" height="259" key="GridCell.Tab.0.right/72.34.1848.1046@72.34.1848.1046" timestamp="1724828819479" />
+    <state width="1792" height="321" key="GridCell.Tab.0.left/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996823" />
+    <state width="1792" height="321" key="GridCell.Tab.0.right" timestamp="1724849996824">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.0.right/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996824" />
+    <state width="1792" height="321" key="GridCell.Tab.1.bottom" timestamp="1724849996826">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.bottom/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996826" />
+    <state width="1792" height="321" key="GridCell.Tab.1.center" timestamp="1724849996825">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.center/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996825" />
+    <state width="1792" height="321" key="GridCell.Tab.1.left" timestamp="1724849996825">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.left/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996825" />
+    <state width="1792" height="321" key="GridCell.Tab.1.right" timestamp="1724849996826">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.right/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996826" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/arun_app$mongo_client.coverage" NAME="mongo_client Coverage Results" MODIFIED="1724828557861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/arun_app$app.coverage" NAME="app Coverage Results" MODIFIED="1724731287524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/arun_app$mongo_client.coverage" NAME="mongo_client Coverage Results" MODIFIED="1724845305896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/arun_app$app.coverage" NAME="app Coverage Results" MODIFIED="1724850271095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
