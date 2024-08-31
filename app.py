@@ -51,7 +51,7 @@ def register():
 @app.route('/dashboard')
 def dashboard():
     if 'username' in session:
-        return f"Welcome, {session['username']}! <a href='/logout'>Logout</a>"
+        return render_template('dashboard.html')
     else:
         return redirect(url_for('login'))
 
