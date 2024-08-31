@@ -2,5 +2,5 @@ Flask==2.1.2
 python-dotenv==1.0.1
 Gunicorn
 Flask_PyMongo==2.3.0
-pymongo==4.2.0
+pymongo[srv]==4.2.0
 werkzeug==2.0.3
