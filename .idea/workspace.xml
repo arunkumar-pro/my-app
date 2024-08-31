@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="bd9ba625-cfae-4c0e-81db-56c1120c06e4" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="bd9ba625-cfae-4c0e-81db-56c1120c06e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/mongo_client.py" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,11 +88,21 @@
       <workItem from="1724817609880" duration="2623000" />
       <workItem from="1724825787110" duration="1763000" />
       <workItem from="1724839566334" duration="2008000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1724844876090" duration="2214000" />
+      <workItem from="1724847927794" duration="2488000" />
+      <workItem from="1724855991880" duration="1095000" />
+      <workItem from="1724926842454" duration="530000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="WindowStateProjectService">
     <state x="450" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1724818954007">
@@ -98,6 +116,7 @@
     <state width="1792" height="259" key="GridCell.Tab.0.bottom" timestamp="1724828819479">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
+<<<<<<< Updated upstream
     <state width="1792" height="259" key="GridCell.Tab.0.bottom/72.34.1848.1046@72.34.1848.1046" timestamp="1724828819479" />
     <state width="1792" height="259" key="GridCell.Tab.0.center" timestamp="1724828819478">
       <screen x="72" y="34" width="1848" height="1046" />
@@ -111,9 +130,44 @@
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
     <state width="1792" height="259" key="GridCell.Tab.0.right/72.34.1848.1046@72.34.1848.1046" timestamp="1724828819479" />
+=======
+    <state x="726" y="258" width="530" height="605" key="FileChooserDialogImpl/72.34.1848.1046@72.34.1848.1046" timestamp="1724848053558" />
+    <state width="1792" height="259" key="GridCell.Tab.0.bottom" timestamp="1724857086835">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="259" key="GridCell.Tab.0.bottom/72.34.1848.1046@72.34.1848.1046" timestamp="1724857086835" />
+    <state width="1792" height="259" key="GridCell.Tab.0.center" timestamp="1724857086835">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="259" key="GridCell.Tab.0.center/72.34.1848.1046@72.34.1848.1046" timestamp="1724857086835" />
+    <state width="1792" height="259" key="GridCell.Tab.0.left" timestamp="1724857086835">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="259" key="GridCell.Tab.0.left/72.34.1848.1046@72.34.1848.1046" timestamp="1724857086835" />
+    <state width="1792" height="259" key="GridCell.Tab.0.right" timestamp="1724857086835">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="259" key="GridCell.Tab.0.right/72.34.1848.1046@72.34.1848.1046" timestamp="1724857086835" />
+    <state width="1792" height="321" key="GridCell.Tab.1.bottom" timestamp="1724849996826">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.bottom/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996826" />
+    <state width="1792" height="321" key="GridCell.Tab.1.center" timestamp="1724849996825">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.center/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996825" />
+    <state width="1792" height="321" key="GridCell.Tab.1.left" timestamp="1724849996825">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.left/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996825" />
+    <state width="1792" height="321" key="GridCell.Tab.1.right" timestamp="1724849996826">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state width="1792" height="321" key="GridCell.Tab.1.right/72.34.1848.1046@72.34.1848.1046" timestamp="1724849996826" />
+>>>>>>> Stashed changes
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/arun_app$mongo_client.coverage" NAME="mongo_client Coverage Results" MODIFIED="1724845305896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/arun_app$app.coverage" NAME="app Coverage Results" MODIFIED="1724850271095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/arun_app$app.coverage" NAME="app Coverage Results" MODIFIED="1724855994823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
