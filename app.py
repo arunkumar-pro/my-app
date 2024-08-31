@@ -1,11 +1,11 @@
 from flask import Flask, render_template, redirect, url_for, request, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from mongo_client import users
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 # Simulated user database
-users_db = {"username": "kumararun31380@gmail.com", "password": "Arun@123"}
+# users_db = {"username": "kumararun31380@gmail.com", "password": "Arun@123"}
 
 
 @app.route('/')
@@ -18,9 +18,10 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        user_data = users.find_one({"username": username})
+        check_pass = check_password_hash(user_data["password"], password)
 
-        user = users_db.get(username)
-        if username == users_db.get("username") and password == users_db.get("password"):
+        if user_data and check_pass:
             session['username'] = username
             return redirect(url_for('dashboard'))
         else:
@@ -35,13 +36,13 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        user_data = users.find_one({"username": username})
 
-        if username in users_db:
+        if user_data:
             flash('Username already exists')
             return redirect(url_for('register'))
-
-        users_db["username"] = username
-        users_db["password"] = password
+        data = {"username": username, "password": generate_password_hash(password)}
+        users.insert_one(data)
         flash('Registration successful! Please log in.')
         return redirect(url_for('login'))
 

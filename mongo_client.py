@@ -8,13 +8,13 @@ database_url = os.getenv("BD_URL")
 
 client = pymongo.MongoClient(database_url)
 
-db = client["banking"]
-col = db["customer"]
+db = client["user_data"]
+users = db["students"]
 
-query = {"name": "AKvarsha"}
-
-data = col.find_one(query)
-print(data)
+# query = {"name": "AKvarsha"}
+#
+# data = col.find_one(query)
+# print(data)
 
 
 
