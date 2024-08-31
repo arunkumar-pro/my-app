@@ -1,11 +1,13 @@
 from flask import Flask, render_template, redirect, url_for, request, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from mongo_client import users
-app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
-# Simulated user database
-# users_db = {"username": "kumararun31380@gmail.com", "password": "Arun@123"}
+
+app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY")
 
 
 @app.route('/')
@@ -19,9 +21,8 @@ def login():
         username = request.form['username']
         password = request.form['password']
         user_data = users.find_one({"username": username})
-        check_pass = check_password_hash(user_data["password"], password)
 
-        if user_data and check_pass:
+        if user_data and check_password_hash(user_data["password"], password):
             session['username'] = username
             return redirect(url_for('dashboard'))
         else:
@@ -41,7 +42,10 @@ def register():
         if user_data:
             flash('Username already exists')
             return redirect(url_for('register'))
-        data = {"username": username, "password": generate_password_hash(password)}
+
+        # Use a supported hashing method (fallback to pbkdf2:sha256)
+        hashed_password = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+        data = {"username": username, "password": hashed_password}
         users.insert_one(data)
         flash('Registration successful! Please log in.')
         return redirect(url_for('login'))
@@ -61,4 +65,4 @@ def dashboard():
 def logout():
     session.pop('username', None)
     return redirect(url_for('index'))
-
+    
