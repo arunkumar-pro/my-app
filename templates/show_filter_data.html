@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic Search Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: purple;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filters input[type="text"] {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        .filters input[type="submit"] {
+            padding: 5px 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .total-records {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .pagination {
+            text-align: center;
+        }
+
+        .pagination a {
+            margin: 0 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ddd;
+        }
+
+        .pagination a.active {
+            background-color: green;
+            color: white;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h2>Welcome to Elastic Search Operations</h2>
+        <div class="filters">
+            <form action="/show/all/es_data" method="get">
+                <input type="text" name="id" placeholder="Filter by Id">
+                <input type="text" name="name" placeholder="Filter by Name">
+                <input type="text" name="age" placeholder="Filter by Age">
+                <input type="text" name="country" placeholder="Filter by Country">
+                <input type="submit" value="Filter">
+            </form>
+        </div>
+        <div class="total-records">
+            Total Records: {{ total_records }}
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Country</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record._id }}</td>
+                <td>{{ record._source.name }}</td>
+                <td>{{ record._source.age }}</td>
+                <td>{{ record._source.phone }}</td>
+                <td>{{ record._source.country }}</td>
+                <td>
+                    <form action="/data/{{ record._id }}/delete" method="post">
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        {% for page_num in range(1, total_pages + 1) %}
+            <a href="/show/all/es_data?page={{ page_num }}"{% if page_num == current_page %} class="active"{% endif %}>{{ page_num }}</a>
+        {% endfor %}
+    </div>
+</body>
+</html>
