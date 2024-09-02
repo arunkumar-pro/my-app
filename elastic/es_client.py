@@ -42,7 +42,7 @@ def create_es_client():
 
         # Ping to check if the connection is successful
         if es.ping():
-            create_index(es, mapping, index=ES_INDEX)
+            # create_index(es, mapping, index=ES_INDEX)
             print("Connected successfully")
             print("Connected to Elasticsearch with Basic Authentication")
             res["message"] = "Connected to Elasticsearch and Mapping  with Basic Authentication"
