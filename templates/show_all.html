@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data with Pagination</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .pagination a {
+            margin: 0 5px;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .total-count {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2 style="color: blue;">Welcome to Elastic Search Operations</h2>
+    <div class="total-count" id="total-records">Total Records: 0</div>
+</div>
+
+<table id="data-table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Country</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data rows will be inserted here -->
+    </tbody>
+</table>
+
+<div class="pagination" id="pagination"></div>
+
+<script>
+    const data = {{ data | tojson }};
+    const rowsPerPage = 50; // Number of records per page
+    let currentPage = 1;
+
+    function displayTable(page) {
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        const paginatedData = data.slice(start, end);
+
+        const tableBody = document.querySelector("#data-table tbody");
+        tableBody.innerHTML = "";
+
+        paginatedData.forEach(item => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item._id}</td>
+                <td>${item._source.name}</td>
+                <td>${item._source.age}</td>
+                <td>${item._source.phone}</td>
+                <td>${item._source.country}</td>
+                <td>
+                    <form action="/data/${item._id}/delete" method="post">
+                        <button type="submit" class="delete-button" style="background-color: red; color: white;">Delete</button>
+                    </form>
+                </td>`;
+            tableBody.appendChild(row);
+        });
+    }
+
+    function setupPagination() {
+        const pageCount = Math.ceil(data.length / rowsPerPage);
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        for (let i = 1; i <= pageCount; i++) {
+            const pageLink = document.createElement("a");
+            pageLink.textContent = i;
+            pageLink.href = "#";
+            pageLink.classList.add("page-link");
+            if (i === currentPage) pageLink.classList.add("active");
+            pageLink.addEventListener("click", function(e) {
+                e.preventDefault();
+                currentPage = i;
+                displayTable(currentPage);
+                document.querySelectorAll(".page-link").forEach(link => link.classList.remove("active"));
+                pageLink.classList.add("active");
+            });
+            pagination.appendChild(pageLink);
+        }
+    }
+
+    function updateTotalRecords() {
+        const totalRecordsElement = document.getElementById("total-records");
+        totalRecordsElement.textContent = `Total Records: ${data.length}`;
+    }
+
+    displayTable(currentPage);
+    setupPagination();
+    updateTotalRecords(); // Update the total records count
+</script>
+
+</body>
+</html>
