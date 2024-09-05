@@ -21,11 +21,11 @@ ES_INDEX = os.environ.get("ES_INDEX", "customer")
 mapping = {
     "mappings": {
         "properties": {
-            "_id": {"type": "keyword"},
+            "_id": {"type": "keyword"}, # keyword -> exact match
             "name": {"type": "text"},
             "age": {"type": "integer"},
-            "phone": {"type": "keyword"},  # Phone numbers are better as keyword since they won't be analyzed
-            "country": {"type": "text"}
+            "phone": {"type": "keyword"},
+            "country": {"type": "text"} # text -> it will return if the word is present in the para or even a single line
         }
     }
 }
